@@ -37,4 +37,11 @@ Use the plone instance
 
 
 
+Log rotation
+-------------
+::
+
+	ln -s /opt/minitage/zope/pgolf-prod/etc/logrotate.conf /etc/logrotate.d/pgolf-plone
+
+
 
