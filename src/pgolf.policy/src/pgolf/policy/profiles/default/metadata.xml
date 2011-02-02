@@ -7,6 +7,7 @@
       <dependency>profile-Products.CMFPlacefulWorkflow:CMFPlacefulWorkflow</dependency>
       <dependency>profile-Products.Ploneboard:ploneboard</dependency>
       <dependency>profile-plone.app.blob:default</dependency>
+      <dependency>profile-medialog.subskins:default</dependency>
       <dependency>profile-Products.ContentWellPortlets:default</dependency>
       <dependency>profile-Products.csvreplicata:default</dependency>
       <dependency>profile-Products.TinyMCE:TinyMCE</dependency>

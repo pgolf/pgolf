@@ -1,6 +1,6 @@
-* A project has been created in /tmp/tmpt5Kc53.
+* A project has been created in /tmp/tmpL3AYiT.
 
-* A minilay has been installed in /tmp/tmpt5Kc53/minilays/pgolf.
+* A minilay has been installed in /tmp/tmpL3AYiT/minilays/pgolf.
 * It contains those minilbuilds:
 	- pgolf
 	- pgolf-prod-light

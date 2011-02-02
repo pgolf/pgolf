@@ -96,6 +96,8 @@ def setup_policyPloneSite():
 #with_ploneproduct_ploneboard
     import Products.Ploneboard
     import Products.SimpleAttachment
+#with_ploneproduct_subskins
+    import medialog.subskins
 #with_ploneproduct_contentwellportlet
     import Products.ContentWellPortlets
 #with_ploneproduct_cgallery
@@ -111,6 +113,9 @@ def setup_policyPloneSite():
     # - Load the python packages that are registered as Zope2 Products via Five
     #   which can't happen until we have loaded the package ZCML.
     # ------------------------------------------------------------------------------------
+
+#with_ploneproduct_subskins
+    ztc.installPackage('medialog.subskins')
 
 #with_ploneproduct_ploneappblob
     ztc.installPackage('plone.app.blob')

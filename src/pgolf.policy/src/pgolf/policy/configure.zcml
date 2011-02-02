@@ -29,6 +29,8 @@
   <!--with_ploneproduct_plominotinymce -->
   <!--with_ploneproduct_tinymce -->
   <include package="Products.TinyMCE" file="configure.zcml"/>
+  <!--with_ploneproduct_subskins -->
+  <include package="medialog.subskins" file="configure.zcml"/>
   <!--with_ploneproduct_pz3cform -->
   <include package="plone.directives.form" file="configure.zcml"/>
   <!--with_ploneproduct_pz3cform -->

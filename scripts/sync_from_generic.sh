@@ -23,33 +23,8 @@ policy="tests/base.py
 configure.zcml
 profiles/default/metadata.xml"
 for i in $policy;do
-    rsync -azv t/src/$PROJECT.policy/src/$PROJECT/policy/$i src.mrdeveloper/$PROJECT.policy/src/$PROJECT/policy/$i
-+done
- sed -re "
-sed -re "/\[sources\]/{
-        a $PROJECT.policy = svn $IMPORT_URL/eggs/$PROJECT.policy/trunk
-        a $PROJECT.skin = svn $IMPORT_URL/eggs/$PROJECT.skin/trunk
-        a $PROJECT.tma = svn $IMPORT_URL/eggs/$PROJECT.tma/trunk
-        a $PROJECT.testing = svn $IMPORT_URL/eggs/$PROJECT.testing/trunk
-}" -i  etc/project/sources.cfg
-sed -re "s:(src/)?$PROJECT\.((skin)|(tma)|(policy)|(testing))::g" -i etc/project/$PROJECT.cfg
-sed -re "/auto-checkout \+=/{
-        a \    $PROJECT.policy
-        a \    $PROJECT.tma
-        a \    $PROJECT.skin
-        a \    $PROJECT.testing
-}"  -i etc/project/sources.cfg
-sed -re "/eggs \+=.*buildout:eggs/{
-        a \    $PROJECT.policy
-        a \    $PROJECT.tma
-        a \    $PROJECT.skin
-        a \    $PROJECT.testing
-}"  -i etc/project/$PROJECT.cfg
-sed -re "/zcml \+=/{
-        a \    $PROJECT.policy
-        a \    $PROJECT.tma
-        a \    $PROJECT.skin
-}"  -i etc/project/$PROJECT.cfg
+    rsync -azv t/src/$PROJECT.policy/src/$PROJECT/policy/$i src/$PROJECT.policy/src/$PROJECT/policy/$i
+done
 sed -re "s/.*:default/    ${PROJECT}.policy:default/g" -i  etc/project/$PROJECT.cfg
 sed -re "s/(extends=.*)/\1 etc\/sys\/settings-prod.cfg/g" -i buildout-prod.cfg
 sed -re "/\[buildout\]/ {
