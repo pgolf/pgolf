@@ -68,6 +68,11 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>with_ploneproduct_subskins</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>with_ploneproduct_ploneboard</td>
 	<td></td>
 </tr>
@@ -91,7 +96,6 @@
 	<td>submit_cgwbDownload</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

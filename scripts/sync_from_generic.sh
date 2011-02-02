@@ -31,6 +31,7 @@ sed -re "/\[buildout\]/ {
 aallow-hosts = \${mirrors:allow-hosts}
 }" -i etc/base.cfg
 sed -re "/\[mirrors\]/ {
+aminitage-globalenv=true
 aallow-hosts =
 a\     *localhost*
 a\     *willowrise.org*
@@ -38,6 +39,7 @@ a\     *plone.org*
 a\     *zope.org*
 a\     *effbot.org*
 a\     *python.org*
+a\     *pybrary.net*
 a\     *initd.org*
 a\     *googlecode.com*
 a\     *plope.com*
@@ -45,5 +47,9 @@ a\     *bitbucket.org*
 a\     *repoze.org*
 a\     *crummy.com*
 a\     *minitage.org*
+a\     *.selenic.com*
 }" -i etc/sys/settings.cfg
+sed -re "s/python-2.6/subversion-1.6 git-1.7 python-2.6/g" -i minilays/pgolf/pgolf* 
+
+
 # vim:set et sts=4 ts=4 tw=80:
