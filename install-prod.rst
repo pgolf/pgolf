@@ -28,7 +28,12 @@ cat /opt/minitage/minilays/pgolf/pgolf-prod
 		description= a plone 4.0.3 buildout for pgolf (PRODUCTION MODE)
 		buildout_config=minitage.buildout-prod.cfg
 
+Use the plone instance
+-------------------------------
 
+!WARNING! ALWAYS Activate the environment::
+
+	. /opt/minitage/zope/pgolf-prod
 
 
 
