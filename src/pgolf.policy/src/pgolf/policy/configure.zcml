@@ -1,0 +1,81 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="pgolf.policy">
+  <include package="Products.Five" file="configure.zcml"/>
+  <!-- Load the ZCML configuration for the pgolf.policy package.-->
+  <!--with_ploneproduct_fivegrok -->
+  <!--with_ploneproduct_cz3cformgrok -->
+  <!--with_ploneproduct_pz3cform -->
+  <include package="five.grok" file="configure.zcml"/>
+  <!--with_ploneproduct_ploneappblob -->
+  <include package="plone.app.blob" file="configure.zcml"/>
+  <!--with_ploneproduct_cz3cformgrok -->
+  <!--with_ploneproduct_pz3cform -->
+  <include package="plone.app.z3cform" file="configure.zcml"/>
+  <!--with_ploneproduct_ploneboard -->
+  <!--with_ploneproduct_cynin -->
+  <!--with_ploneproduct_cpwkf -->
+  <include package="Products.CMFPlacefulWorkflow" file="configure.zcml"/>
+  <!--with_ploneproduct_ploneboard -->
+  <include package="Products.Ploneboard" file="configure.zcml"/>
+  <!--with_ploneproduct_ploneboard -->
+  <include package="Products.SimpleAttachment" file="configure.zcml"/>
+  <!--with_ploneproduct_contentwellportlet -->
+  <include package="Products.ContentWellPortlets" file="configure.zcml"/>
+  <!--with_ploneproduct_ploneformgen -->
+  <include package="Products.PloneFormGen" file="configure.zcml"/>
+  <!--with_ploneproduct_plominotinymce -->
+  <!--with_ploneproduct_tinymce -->
+  <include package="Products.TinyMCE" file="configure.zcml"/>
+  <!--with_ploneproduct_pz3cform -->
+  <include package="plone.directives.form" file="configure.zcml"/>
+  <!--with_ploneproduct_pz3cform -->
+  <include package="plone.directives.form" file="meta.zcml"/>
+  <!--with_ploneproduct_cz3cformgrok -->
+  <!--with_ploneproduct_pz3cform -->
+  <include package="plone.z3cform" file="configure.zcml"/>
+  <!--with_ploneproduct_cgallery -->
+  <include package="collective.gallery" file="configure.zcml"/>
+  <five:registerPackage package="." initialize=".policy.initialize" />
+  <include package="z3c.autoinclude" file="meta.zcml" />
+  <!-- Include direct package dependencies -->
+  <include package="pgolf.skin" />
+  <include package="pgolf.tma" />
+<!--uncomment to register at content types with fss
+  <include package="iw.fss" file="atct.zcml" />-->
+  <genericsetup:registerProfile
+      name="qi"
+      title="pgolf Policy QI"
+      directory="profiles/qi"
+      description="Turn a Plone site into the pgolf QIINFO site."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+  <genericsetup:registerProfile
+      name="default"
+      title="pgolf Policy"
+      directory="profiles/default"
+      description="Turn a Plone site into the pgolf site."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+    />
+  <adapter factory=".dashboard.MyPortalDefaultDashboard"/>
+  <utility factory=".app_config.HiddenProducts" name="pgolf.hiddenproducts"/>
+  <utility factory=".app_config.HiddenProfiles" name="pgolf.hiddenprofiles"/>
+  <genericsetup:importStep
+      name="pgolf_policy setupVarious"
+      title="various setup for policy Policy"
+      description="description"
+      handler="pgolf.policy.setuphandlers.setupVarious">
+    <depends name="content"/>
+  </genericsetup:importStep>
+  <genericsetup:importStep
+      name="pgolf_policy setupQi"
+      title="Quick Installer  setup for policy Policy"
+      description="description"
+      handler="pgolf.policy.setuphandlers.setupQi">
+    <depends name="content"/>
+  </genericsetup:importStep> 
+  <include package=".migrations"/>
+<!-- vim:set ft=xml: -->
+</configure>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+    default_skin="pgolf.skin">
+ <object name="pgolf_skin_custom_images"
+    meta_type="Filesystem Directory View"
+    directory="pgolf.skin:skins/pgolf_skin_custom_images"/>
+ <object name="pgolf_skin_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="pgolf.skin:skins/pgolf_skin_custom_templates"/>
+ <object name="pgolf_skin_styles"
+    meta_type="Filesystem Directory View"
+    directory="pgolf.skin:skins/pgolf_skin_styles"/>
+<skin-path name="pgolf.skin" based-on="Sunburst Theme">
+  <layer name="pgolf_skin_custom_images"
+     insert-after="custom"/>
+  <layer name="pgolf_skin_custom_templates"
+     insert-after="pgolf_skin_custom_images"/>
+  <layer name="pgolf_skin_styles"
+     insert-after="pgolf_skin_custom_templates"/>
+ </skin-path>
+</object>

@@ -1,0 +1,23 @@
+<metadata>
+  <version>0.1</version>
+  <dependencies>
+  <!-- QuickInstalled dependencies -->
+      <dependency>profile-pgolf.policy:qi</dependency>
+  <!-- GenericSetup dependencies -->
+      <dependency>profile-Products.CMFPlacefulWorkflow:CMFPlacefulWorkflow</dependency>
+      <dependency>profile-Products.Ploneboard:ploneboard</dependency>
+      <dependency>profile-plone.app.blob:default</dependency>
+      <dependency>profile-Products.ContentWellPortlets:default</dependency>
+      <dependency>profile-Products.csvreplicata:default</dependency>
+      <dependency>profile-Products.TinyMCE:TinyMCE</dependency>
+      <dependency>profile-collective.gallery:default</dependency>
+      <dependency>profile-Products.SimpleAttachment:SimpleAttachment</dependency>
+      <dependency>profile-plone.app.z3cform:default</dependency>
+      <dependency>profile-Products.PloneFormGen:default</dependency>
+  <!-- Own Products -->
+      <!--
+        <dependency>profile-pgolf.tma:default</dependency>
+      -->
+      <dependency>profile-pgolf.skin:default</dependency>
+ </dependencies>
+</metadata>
