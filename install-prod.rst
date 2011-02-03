@@ -30,11 +30,17 @@ from root, you need to be zope::
 
 Go inside the instance folder
 ---------------------------------
+::
+	cd /opt/minitage/zope/pgolf-prod
+
+The instance environement
+----------------------------
+
+*** YOU NEED TO DO THIS PRIORI TO USE ANY COMMAND ON YOUR INSTANCE ***
 
 If you do not have ***(minitage-pgolf-prod)*** in the shell prompt do this
 ::
 
-	cd /opt/minitage/zope/pgolf-prod
 	. /opt/minitage/zope/pgolf-prod/sys/share/minitage/minitage.env
 
 Use supervisor to know the status
