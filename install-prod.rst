@@ -4,12 +4,12 @@ Plone installation notes
 
 Sum up
 -------
- - :port zope: 25555
- - :port supervisor: 25553
- - :port zeo: 25554
- - :install path: /opt/minitage/zope/pgolf-prod
- - :user: zope
- - :apache bits: /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf
+ * :port zope: 25555
+ * :port supervisor: 25553
+ * :port zeo: 25554
+ * :install path: /opt/minitage/zope/pgolf-prod
+ * :user: zope
+ * :apache bits: /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf
 
 Minitage
 -----------
