@@ -30,6 +30,8 @@ from root, you need to be zope::
 
 Go inside the instance folder
 ---------------------------------
+
+If you do not have ***(minitage-pgolf-prod)*** in the shell prompt do this
 ::
 
 	cd /opt/minitage/zope/pgolf-prod
