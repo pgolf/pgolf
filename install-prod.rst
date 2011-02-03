@@ -17,9 +17,12 @@ Pgolf is installed in a basic minitage installation.
 Its prefix is in /opt/minitage.
 The minitage goal is to have all the dependencies of pgolf installed alongside the project.
 
-Use the plone instance
+Use the zope user
 -------------------------------
 **!WARNING!**
+
+The **id** command lets you verify the current user.
+
 from root, you need to be zope::
 
 	id
