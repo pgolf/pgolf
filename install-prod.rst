@@ -196,6 +196,10 @@ Add a plone site
 
             - Adapt the ProxyPass Rules to match your plone installation
 
+                ProxyPass        /             http://127.0.0.1:25556/VirtualHostBase/http/www.foo.ch:80/foo/VirtualHostRoot/
+                ProxyPassReverse /             http://127.0.0.1:25556/VirtualHostBase/http/www.foo.ch:80/foo/VirtualHostRoot/
+                                                                                           DOMAIN              PLONEID
+
 
 
 
