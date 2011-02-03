@@ -20,11 +20,20 @@ The minitage goal is to have all the dependencies of pgolf installed alongside t
 Use the plone instance
 -------------------------------
 !WARNING! ALWAYS Activate the environment::
+from root, you need to be zope::
 
+	id
+	uid=0(root) gid=0(root) groups=0(root),1(bin) ...
+	su zope
+	id
+	uid=32009(zope) gid=100(users) groups=100(users)
+	cd /opt/minitage/zope/pgolf-prod
 	. /opt/minitage/zope/pgolf-prod/sys/share/minitage/minitage.env
 
-	Use supervisor to know the status
-	+++++++++++++++++++++++++++++++++++
+Use supervisor to know the status
+--------------------------------
+::
+
 	cd $INS
 	./bin/supervisorctl st
 
