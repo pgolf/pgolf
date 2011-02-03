@@ -72,7 +72,7 @@ Edit the websites configuration
 ------------------------------------
 
   - vhosts bits are in ``minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf``.
-  - Edit this file in coda via ftp and add new vhosts or edit existing ones
+  - Edit this file in coda via ssh as **root**: ``/home/fit4par/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf``.
   - To take changes in account, restart apache, as **root**::
 
 		service httpd restart
@@ -136,7 +136,6 @@ To resume apache to work:
   - Download the main apache configuration::
  
 		scp -P 100 root@208.116.60.117:/etc/httpd/conf/httpd.conf http.conf
- 
 
   - Do the edit
   - Reupload::
