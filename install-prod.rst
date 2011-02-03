@@ -99,8 +99,9 @@ To resume apache to work:
 
 		scp -P 100 httpd.conf root@208.116.60.117:/etc/httpd/conf/httpd.conf
 
-  - To take changes in account, restart apache, as **root**::
+  - To take changes in account, restart apache on your server, as **root**::
 
+        ssh root@208.116.60.117
 		service httpd restart
 
 
