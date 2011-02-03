@@ -84,9 +84,7 @@ NOTE: We have put in the cpanel apache configuration editor an post hook to incl
 
 	Include /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf in the textarea
 
-
 To resume apache to work:
-
 
   - Edit on your server as *root* :  /etc/httpd/conf/httpd.conf via *SSH*
   - Remove from this file all <VirtualHost> nodes (from <VirtualHost> to </VirtualHost>) which relate to your domains
@@ -132,8 +130,7 @@ To resume apache to work:
         ssh root@208.116.60.117
 		service httpd restart
 
- Alternativlt without coda
-
+ Alternativly without coda:
 
   - Open a terminal
   - Download the main apache configuration::
