@@ -194,7 +194,7 @@ Add a plone site
 
                  /usr/local/apache/domlogs/golfchallenge.ch-bytes_log -> g /usr/local/apache/domlogs/foo.ch-bytes_log
 
-            - Adapt the ProxyPass Rules to match your plone installation
+            - Adapt the ProxyPass Rules to match your plone installation::
 
                 ProxyPass        /             http://127.0.0.1:25556/VirtualHostBase/http/www.foo.ch:80/foo/VirtualHostRoot/
                 ProxyPassReverse /             http://127.0.0.1:25556/VirtualHostBase/http/www.foo.ch:80/foo/VirtualHostRoot/
