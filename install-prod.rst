@@ -173,14 +173,15 @@ Products installed at installation time:
 
 Add a plone site
 ------------------
-    - Go to http://www.biasio.ch/zmiroot/manage_main (admin/XXXXX)
+    - Go to http://www.b:asio.ch/zmiroot/manage_main (admin/XXXXX)
 
             - create a plone site: select plone site in the select box
                 
-                  -  put 'foo' as the plone site id
-                  - go for creation
-
-
+                 - put 'foo' as the plone site id
+                 - go for creation
+                 - enter this website (foo)
+                 - go to the add one panel ( admin / konfiguration / Erweiterungen)
+                 - install the pgolf.policy product
 
     - Edit  /home/fit4par/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf via ssh
     - Copy Paste a VirtualHost and adapt it to your needs:
