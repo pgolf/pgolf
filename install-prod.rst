@@ -171,4 +171,34 @@ Products installed at installation time:
  - collective.gallery
 
 
+Add a plone site
+------------------
+    - Go to http://www.biasio.ch/zmiroot/manage_main (admin/XXXXX)
+
+            - create a plone site: select plone site in the select box
+                
+                  -  put 'foo' as the plone site id
+                  - go for creation
+
+
+
+    - Edit  /home/fit4par/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf via ssh
+    - Copy Paste a VirtualHost and adapt it to your needs:
+
+            - Change the server name / alias::
+
+                    ServerName foo.ch
+                    
+            - Change the logs pass::
+
+                 /usr/local/apache/domlogs/golfchallenge.ch-bytes_log -> g /usr/local/apache/domlogs/foo.ch-bytes_log
+
+            - Adapt the ProxyPass Rules to match your plone installation
+
+
+
+
+
+
+
 

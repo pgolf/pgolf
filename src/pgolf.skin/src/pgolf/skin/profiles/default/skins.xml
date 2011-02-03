@@ -1,21 +1,372 @@
-<?xml version="1.0"?>
-<object name="portal_skins" allow_any="False" cookie_persistence="False"
-    default_skin="pgolf.skin">
- <object name="pgolf_skin_custom_images"
+<object name="portal_skins" meta_type="Plone Skins Tool" allow_any="False"
+   cookie_persistence="False" default_skin="pgolf.skin"
+   request_varname="plone_skin">
+ <object name="ATContentTypes" meta_type="Filesystem Directory View"
+    directory="Products.ATContentTypes:skins/ATContentTypes"/>
+ <object name="CMFEditions" meta_type="Filesystem Directory View"
+    directory="Products.CMFEditions:skins/CMFEditions"/>
+ <object name="CMFPlacefulWorkflow" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlacefulWorkflow:skins/CMFPlacefulWorkflow"/>
+ <object name="LanguageTool" meta_type="Filesystem Directory View"
+    directory="Products.PloneLanguageTool:skins/LanguageTool"/>
+ <object name="PasswordReset" meta_type="Filesystem Directory View"
+    directory="Products.PasswordResetTool:skins/PasswordReset"/>
+ <object name="PloneFormGen" meta_type="Filesystem Directory View"
+    directory="Products.PloneFormGen:skins/PloneFormGen"/>
+ <object name="archetypes" meta_type="Filesystem Directory View"
+    directory="Products.Archetypes:skins/archetypes"/>
+ <object name="archetypes_kss" meta_type="Filesystem Directory View"
+    directory="Products.Archetypes:skins/archetypes_kss"/>
+ <object name="attachment_widgets" meta_type="Filesystem Directory View"
+    directory="Products.SimpleAttachment:skins/attachment_widgets"/>
+ <object name="classic_ecmascript" meta_type="Filesystem Directory View"
+    directory="plonetheme.classic:skins/classic_ecmascript"/>
+ <object name="classic_styles" meta_type="Filesystem Directory View"
+    directory="plonetheme.classic:skins/classic_styles"/>
+ <object name="cmf_legacy" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/cmf_legacy"/>
+ <object name="cmfeditions_views" meta_type="Filesystem Directory View"
+    directory="Products.CMFEditions:skins/cmfeditions_views"/>
+ <object name="collective_gallery_theme" meta_type="Filesystem Directory View"
+    directory="collective.gallery:skins/collective_gallery_theme"/>
+ <object name="csvreplicata_images" meta_type="Filesystem Directory View"
+    directory="Products.csvreplicata:skins/csvreplicata_images"/>
+ <object name="csvreplicata_templates" meta_type="Filesystem Directory View"
+    directory="Products.csvreplicata:skins/csvreplicata_templates"/>
+ <object name="custom" meta_type="Folder"/>
+ <object name="medialog_subskins_custom_images"
     meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/medialog_subskins_custom_images"/>
+ <object name="medialog_subskins_custom_templates"
+    meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/medialog_subskins_custom_templates"/>
+ <object name="medialog_subskins_styles" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/medialog_subskins_styles"/>
+ <object name="mimetypes_icons" meta_type="Filesystem Directory View"
+    directory="Products.MimetypesRegistry:skins/mimetypes_icons"/>
+ <object name="pgolf_skin_custom_images" meta_type="Filesystem Directory View"
     directory="pgolf.skin:skins/pgolf_skin_custom_images"/>
  <object name="pgolf_skin_custom_templates"
     meta_type="Filesystem Directory View"
     directory="pgolf.skin:skins/pgolf_skin_custom_templates"/>
- <object name="pgolf_skin_styles"
-    meta_type="Filesystem Directory View"
+ <object name="pgolf_skin_styles" meta_type="Filesystem Directory View"
     directory="pgolf.skin:skins/pgolf_skin_styles"/>
-<skin-path name="pgolf.skin" based-on="Sunburst Theme">
-  <layer name="pgolf_skin_custom_images"
-     insert-after="custom"/>
-  <layer name="pgolf_skin_custom_templates"
-     insert-after="pgolf_skin_custom_images"/>
-  <layer name="pgolf_skin_styles"
-     insert-after="pgolf_skin_custom_templates"/>
+ <object name="plone_3rdParty" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_3rdParty"/>
+ <object name="plone_content" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_content"/>
+ <object name="plone_deprecated" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_deprecated"/>
+ <object name="plone_ecmascript" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_ecmascript"/>
+ <object name="plone_form_scripts" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_form_scripts"/>
+ <object name="plone_forms" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_forms"/>
+ <object name="plone_images" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_images"/>
+ <object name="plone_kss" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_kss"/>
+ <object name="plone_login" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_login"/>
+ <object name="plone_prefs" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_prefs"/>
+ <object name="plone_scripts" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_scripts"/>
+ <object name="plone_styles" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_styles"/>
+ <object name="plone_templates" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_templates"/>
+ <object name="plone_wysiwyg" meta_type="Filesystem Directory View"
+    directory="Products.CMFPlone:skins/plone_wysiwyg"/>
+ <object name="ploneboard_images" meta_type="Filesystem Directory View"
+    directory="Products.Ploneboard:skins/ploneboard_images"/>
+ <object name="ploneboard_scripts" meta_type="Filesystem Directory View"
+    directory="Products.Ploneboard:skins/ploneboard_scripts"/>
+ <object name="ploneboard_templates" meta_type="Filesystem Directory View"
+    directory="Products.Ploneboard:skins/ploneboard_templates"/>
+ <object name="plonesubskins_images" meta_type="Filesystem Directory View"
+    directory="Products.PloneSubSkins:skins/plonesubskins_images"/>
+ <object name="plonesubskins_scripts" meta_type="Filesystem Directory View"
+    directory="Products.PloneSubSkins:skins/plonesubskins_scripts"/>
+ <object name="plonesubskins_templates" meta_type="Filesystem Directory View"
+    directory="Products.PloneSubSkins:skins/plonesubskins_templates"/>
+ <object name="referencebrowser" meta_type="Filesystem Directory View"
+    directory="archetypes.referencebrowserwidget:skins/referencebrowser"/>
+ <object name="simpleattachment" meta_type="Filesystem Directory View"
+    directory="Products.SimpleAttachment:skins/simpleattachment"/>
+ <object name="subskins_base" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_base"/>
+ <object name="subskins_bottom" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_bottom"/>
+ <object name="subskins_calendar" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_calendar"/>
+ <object name="subskins_colorschemes" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_colorschemes"/>
+ <object name="subskins_extra" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_extra"/>
+ <object name="subskins_globalnav" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_globalnav"/>
+ <object name="subskins_navigation" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_navigation"/>
+ <object name="subskins_portlets" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_portlets"/>
+ <object name="subskins_text" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_text"/>
+ <object name="subskins_top" meta_type="Filesystem Directory View"
+    directory="medialog.subskins:skins/subskins_top"/>
+ <object name="sunburst_images" meta_type="Filesystem Directory View"
+    directory="plonetheme.sunburst:skins/sunburst_images"/>
+ <object name="sunburst_styles" meta_type="Filesystem Directory View"
+    directory="plonetheme.sunburst:skins/sunburst_styles"/>
+ <object name="sunburst_templates" meta_type="Filesystem Directory View"
+    directory="plonetheme.sunburst:skins/sunburst_templates"/>
+ <object name="tinymce" meta_type="Filesystem Directory View"
+    directory="Products.TinyMCE:skins/tinymce"/>
+ <skin-path name="Plone Classic Theme">
+  <layer name="custom"/>
+  <layer name="PloneFormGen"/>
+  <layer name="attachment_widgets"/>
+  <layer name="simpleattachment"/>
+  <layer name="collective_gallery_theme"/>
+  <layer name="tinymce"/>
+  <layer name="csvreplicata_styles"/>
+  <layer name="csvreplicata_images"/>
+  <layer name="csvreplicata_templates"/>
+  <layer name="plonesubskins_templates"/>
+  <layer name="plonesubskins_scripts"/>
+  <layer name="plonesubskins_images"/>
+  <layer name="ploneboard_images"/>
+  <layer name="ploneboard_scripts"/>
+  <layer name="CMFPlacefulWorkflow"/>
+  <layer name="classic_styles"/>
+  <layer name="classic_ecmascript"/>
+  <layer name="referencebrowser"/>
+  <layer name="cmfeditions_views"/>
+  <layer name="CMFEditions"/>
+  <layer name="archetypes"/>
+  <layer name="archetypes_kss"/>
+  <layer name="mimetypes_icons"/>
+  <layer name="LanguageTool"/>
+  <layer name="plone_kss"/>
+  <layer name="ATContentTypes"/>
+  <layer name="PasswordReset"/>
+  <layer name="plone_ecmascript"/>
+  <layer name="plone_wysiwyg"/>
+  <layer name="plone_prefs"/>
+  <layer name="plone_templates"/>
+  <layer name="plone_styles"/>
+  <layer name="plone_form_scripts"/>
+  <layer name="plone_scripts"/>
+  <layer name="plone_forms"/>
+  <layer name="plone_images"/>
+  <layer name="plone_content"/>
+  <layer name="plone_login"/>
+  <layer name="plone_deprecated"/>
+  <layer name="plone_3rdParty"/>
+  <layer name="cmf_legacy"/>
+  <layer name="ploneboard_templates"/>
  </skin-path>
+ <skin-path name="Plone Default">
+  <layer name="custom"/>
+  <layer name="PloneFormGen"/>
+  <layer name="attachment_widgets"/>
+  <layer name="simpleattachment"/>
+  <layer name="collective_gallery_theme"/>
+  <layer name="tinymce"/>
+  <layer name="csvreplicata_styles"/>
+  <layer name="csvreplicata_images"/>
+  <layer name="csvreplicata_templates"/>
+  <layer name="plonesubskins_templates"/>
+  <layer name="plonesubskins_scripts"/>
+  <layer name="plonesubskins_images"/>
+  <layer name="ploneboard_images"/>
+  <layer name="ploneboard_scripts"/>
+  <layer name="CMFPlacefulWorkflow"/>
+  <layer name="referencebrowser"/>
+  <layer name="cmfeditions_views"/>
+  <layer name="CMFEditions"/>
+  <layer name="archetypes"/>
+  <layer name="archetypes_kss"/>
+  <layer name="mimetypes_icons"/>
+  <layer name="LanguageTool"/>
+  <layer name="plone_kss"/>
+  <layer name="ATContentTypes"/>
+  <layer name="PasswordReset"/>
+  <layer name="plone_ecmascript"/>
+  <layer name="plone_wysiwyg"/>
+  <layer name="plone_prefs"/>
+  <layer name="plone_templates"/>
+  <layer name="plone_styles"/>
+  <layer name="plone_form_scripts"/>
+  <layer name="plone_scripts"/>
+  <layer name="plone_forms"/>
+  <layer name="plone_images"/>
+  <layer name="plone_content"/>
+  <layer name="plone_login"/>
+  <layer name="plone_deprecated"/>
+  <layer name="plone_3rdParty"/>
+  <layer name="cmf_legacy"/>
+  <layer name="ploneboard_templates"/>
+ </skin-path>
+ <skin-path name="Sunburst Theme">
+  <layer name="custom"/>
+  <layer name="PloneFormGen"/>
+  <layer name="attachment_widgets"/>
+  <layer name="simpleattachment"/>
+  <layer name="collective_gallery_theme"/>
+  <layer name="tinymce"/>
+  <layer name="csvreplicata_styles"/>
+  <layer name="csvreplicata_images"/>
+  <layer name="csvreplicata_templates"/>
+  <layer name="plonesubskins_templates"/>
+  <layer name="plonesubskins_scripts"/>
+  <layer name="plonesubskins_images"/>
+  <layer name="ploneboard_images"/>
+  <layer name="ploneboard_scripts"/>
+  <layer name="CMFPlacefulWorkflow"/>
+  <layer name="sunburst_images"/>
+  <layer name="sunburst_templates"/>
+  <layer name="sunburst_styles"/>
+  <layer name="referencebrowser"/>
+  <layer name="cmfeditions_views"/>
+  <layer name="CMFEditions"/>
+  <layer name="archetypes"/>
+  <layer name="archetypes_kss"/>
+  <layer name="mimetypes_icons"/>
+  <layer name="LanguageTool"/>
+  <layer name="plone_kss"/>
+  <layer name="ATContentTypes"/>
+  <layer name="PasswordReset"/>
+  <layer name="plone_ecmascript"/>
+  <layer name="plone_wysiwyg"/>
+  <layer name="plone_prefs"/>
+  <layer name="plone_templates"/>
+  <layer name="plone_styles"/>
+  <layer name="plone_form_scripts"/>
+  <layer name="plone_scripts"/>
+  <layer name="plone_forms"/>
+  <layer name="plone_images"/>
+  <layer name="plone_content"/>
+  <layer name="plone_login"/>
+  <layer name="plone_deprecated"/>
+  <layer name="plone_3rdParty"/>
+  <layer name="cmf_legacy"/>
+  <layer name="ploneboard_templates"/>
+ </skin-path>
+ <skin-path name="pgolf.skin">
+  <layer name="custom"/>
+  <layer name="medialog_subskins_custom_images"/>
+  <layer name="medialog_subskins_custom_templates"/>
+  <layer name="subskins_colorschemes"/>
+  <layer name="subskins_extra"/>
+  <layer name="subskins_portlets"/>
+  <layer name="subskins_globalnav"/>
+  <layer name="subskins_calendar"/>
+  <layer name="subskins_bottom"/>
+  <layer name="subskins_text"/>
+  <layer name="subskins_navigation"/>
+  <layer name="subskins_top"/>
+  <layer name="subskins_base"/>
+  <layer name="medialog_subskins_styles"/>
+  <layer name="plonesubskins_templates"/>
+  <layer name="plonesubskins_scripts"/>
+  <layer name="plonesubskins_images"/>
+  <layer name="pgolf_skin_custom_images"/>
+  <layer name="pgolf_skin_custom_templates"/>
+  <layer name="pgolf_skin_styles"/>
+  <layer name="PloneFormGen"/>
+  <layer name="attachment_widgets"/>
+  <layer name="simpleattachment"/>
+  <layer name="collective_gallery_theme"/>
+  <layer name="tinymce"/>
+  <layer name="ploneboard_images"/>
+  <layer name="ploneboard_scripts"/>
+  <layer name="CMFPlacefulWorkflow"/>
+  <layer name="classic_styles"/>
+  <layer name="classic_ecmascript"/>
+  <layer name="referencebrowser"/>
+  <layer name="cmfeditions_views"/>
+  <layer name="CMFEditions"/>
+  <layer name="archetypes"/>
+  <layer name="archetypes_kss"/>
+  <layer name="mimetypes_icons"/>
+  <layer name="LanguageTool"/>
+  <layer name="plone_kss"/>
+  <layer name="ATContentTypes"/>
+  <layer name="PasswordReset"/>
+  <layer name="plone_ecmascript"/>
+  <layer name="plone_wysiwyg"/>
+  <layer name="plone_prefs"/>
+  <layer name="plone_templates"/>
+  <layer name="plone_styles"/>
+  <layer name="plone_form_scripts"/>
+  <layer name="plone_scripts"/>
+  <layer name="plone_forms"/>
+  <layer name="plone_images"/>
+  <layer name="plone_content"/>
+  <layer name="plone_login"/>
+  <layer name="plone_deprecated"/>
+  <layer name="plone_3rdParty"/>
+  <layer name="cmf_legacy"/>
+  <layer name="ploneboard_templates"/>
+ </skin-path>
+ <skin-path name="subskins">
+  <layer name="custom"/>
+  <layer name="PloneFormGen"/>
+  <layer name="attachment_widgets"/>
+  <layer name="simpleattachment"/>
+  <layer name="collective_gallery_theme"/>
+  <layer name="tinymce"/>
+  <layer name="csvreplicata_styles"/>
+  <layer name="csvreplicata_images"/>
+  <layer name="csvreplicata_templates"/>
+  <layer name="medialog_subskins_custom_images"/>
+  <layer name="medialog_subskins_custom_templates"/>
+  <layer name="subskins_colorschemes"/>
+  <layer name="subskins_extra"/>
+  <layer name="subskins_portlets"/>
+  <layer name="subskins_globalnav"/>
+  <layer name="subskins_calendar"/>
+  <layer name="subskins_bottom"/>
+  <layer name="subskins_text"/>
+  <layer name="subskins_navigation"/>
+  <layer name="subskins_top"/>
+  <layer name="subskins_base"/>
+  <layer name="medialog_subskins_styles"/>
+  <layer name="plonesubskins_templates"/>
+  <layer name="plonesubskins_scripts"/>
+  <layer name="plonesubskins_images"/>
+  <layer name="ploneboard_images"/>
+  <layer name="ploneboard_scripts"/>
+  <layer name="CMFPlacefulWorkflow"/>
+  <layer name="classic_styles"/>
+  <layer name="classic_ecmascript"/>
+  <layer name="referencebrowser"/>
+  <layer name="cmfeditions_views"/>
+  <layer name="CMFEditions"/>
+  <layer name="archetypes"/>
+  <layer name="archetypes_kss"/>
+  <layer name="mimetypes_icons"/>
+  <layer name="LanguageTool"/>
+  <layer name="plone_kss"/>
+  <layer name="ATContentTypes"/>
+  <layer name="PasswordReset"/>
+  <layer name="plone_ecmascript"/>
+  <layer name="plone_wysiwyg"/>
+  <layer name="plone_prefs"/>
+  <layer name="plone_templates"/>
+  <layer name="plone_styles"/>
+  <layer name="plone_form_scripts"/>
+  <layer name="plone_scripts"/>
+  <layer name="plone_forms"/>
+  <layer name="plone_images"/>
+  <layer name="plone_content"/>
+  <layer name="plone_login"/>
+  <layer name="plone_deprecated"/>
+  <layer name="plone_3rdParty"/>
+  <layer name="cmf_legacy"/>
+  <layer name="ploneboard_templates"/>
+ </skin-path>
+</object>
 </object>
