@@ -92,13 +92,21 @@ Edit etc/project/versions.cfg, and add your pinning
 
 Products installed at installation time:
 --------------------------------------------
-- medialog.subkins
-- ploneforgen
-- ploneboard
-- contentwellportlets
-- collective.gallery
+ - medialog.subkins
+ - ploneforgen
+ - ploneboard
+ - contentwellportlets
+ - collective.gallery
 
 
+How to use the server text EDITOR
+-----------------------------------------------------
+ - use ::
+	
+	nano /path/to/file
+
+ - The main controls are at the bottom of the page
+ - ^X mean control +x
 
 
 
