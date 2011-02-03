@@ -70,7 +70,35 @@ That had be done to enable logrotatation on the zope server::
 
 Apache Configuration
 ---------------------
-vhosts bits are in ``/opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf``.
+We have put in apoache configuration /editor an post hook to include /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf.::
+
+	Include /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf in the textarea
+
+Edit the websites configuration
+
+  - vhosts bits are in ``/opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf``.
+  - Edit this file and add new vhosts or edit existing ones
+  - To download and edit it locally::
+
+		scp -P 100 root@208.116.60.117:/opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf 200-pgolf.conf
+		coda /200-pgolf.conf
+
+Recover from cpanel overwriting configuration
+
+  - Download the main apache configuration::
+ 
+		scp -P 100 root@208.116.60.117:/etc/httpd/conf/httpd.conf http.conf
+ 
+  - Edit the downloaded file
+  - Remove from this fileall VirtualHost nodes which relate to your domains
+  - Remove the vhost which has a documentroot set to /dev/null
+  - Reupload
+
+		scp -P 100 httpd.conf root@208.116.60.117:/etc/httpd/conf/httpd.conf
+
+For both, to take changes in account, restart apache::
+
+		service httpd restart
 
 Running buildout
 ---------------------
