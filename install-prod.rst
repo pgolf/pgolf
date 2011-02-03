@@ -200,6 +200,13 @@ Add a plone site
                 ProxyPassReverse /             http://127.0.0.1:25556/VirtualHostBase/http/www.foo.ch:80/foo/VirtualHostRoot/
                                                                                            DOMAIN              PLONEID
 
+            - To find the plone id:
+              when you hit /zmiroot on apache, it is linked to the root of the zope
+              so to find the plone id
+                
+                    - you go to '/zmiroot/manage_main'
+                    - select your plone and see what's after zmiroot in the url, here "foo"
+ 
 
 
 
