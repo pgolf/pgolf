@@ -207,6 +207,38 @@ Add a plone site
               select your plone and see what's after zmiroot in the url, here "foo"
  
 
+Run the plone instance in debug mode
+-------------------------------------
+as **root**::
+    
+    service pgolf stop
+
+as **fit4par**::
+
+	cd /opt/minitage/zope/pgolf-prod
+	. /opt/minitage/zope/pgolf-prod/sys/share/minitage/minitage.env
+    ./bin/zeoserver restart
+    ./bin/instance1 fg
+
+
+When you are done, controlC to cut the instance and::    
+
+    ./bin/zeoserver stop
+
+as **root**::
+    
+    service pgolf start
+
+
+
+    
+
+
+
+
+
+
+
 
 
 
