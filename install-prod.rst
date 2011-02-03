@@ -27,6 +27,11 @@ from root, you need to be zope::
 	su zope
 	id
 	uid=32009(zope) gid=100(users) groups=100(users)
+
+Go inside the instance folder
+---------------------------------
+::
+
 	cd /opt/minitage/zope/pgolf-prod
 	. /opt/minitage/zope/pgolf-prod/sys/share/minitage/minitage.env
 
