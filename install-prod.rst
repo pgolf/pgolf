@@ -70,7 +70,7 @@ That had be done to enable logrotatation on the zope server::
 
 Apache Configuration
 ---------------------
-We have put in apoache configuration /editor an post hook to include /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf.::
+We have put in the cpanel apache configuration editor an post hook to include /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf.::
 
 	Include /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf in the textarea
 
