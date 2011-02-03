@@ -19,7 +19,7 @@ The minitage goal is to have all the dependencies of pgolf installed alongside t
 
 Use the plone instance
 -------------------------------
-!WARNING! ALWAYS Activate the environment::
+**!WARNING!**
 from root, you need to be zope::
 
 	id
@@ -36,7 +36,7 @@ Go inside the instance folder
 The instance environement
 ----------------------------
 
-** YOU NEED TO DO THIS PRIORI TO USE ANY COMMAND ON YOUR INSTANCE **
+**YOU NEED TO DO THIS PRIORI TO USE ANY COMMAND ON YOUR INSTANCE**
 
 If you do not have **(minitage-pgolf-prod)** in the shell prompt do this
 ::
@@ -48,7 +48,7 @@ Use supervisor to know the status
 ::
 
 	cd $INS
-	./bin/supervisorctl st
+	./bin/supervisorctl status
 
 Restart the whole server
 -------------------------
