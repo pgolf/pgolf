@@ -121,7 +121,16 @@ To resume apache to work:
 
                         </VirtualHost>
 
-  - Remove the VirtualHost which has a documentroot set to /dev/null
+  - Remove the VirtualHost which has a documentroot set to /dev/null::
+
+                        # WHM DOMAIN FORWARDING VHOST
+                        <VirtualHost 208.116.60.118>
+                            ServerName 208.116.60.118
+                            ServerAdmin root@localhost
+                            DocumentRoot /dev/null
+                            ScriptAliasMatch .* /usr/local/cpanel/cgi-sys/domainredirect.cgi
+                        </VirtualHost>
+
   - Reupload::
 
 		scp -P 100 httpd.conf root@208.116.60.117:/etc/httpd/conf/httpd.conf
