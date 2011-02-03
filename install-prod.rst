@@ -94,6 +94,33 @@ To resume apache to work:
  
   - Edit the downloaded file
   - Remove from this file all <VirtualHost> nodes (from <VirtualHost> to </VirtualHost>) which relate to your domains
+    eg remove ::
+
+                        # DO NOT EDIT. AUTOMATICALLY GENERATED.  IF YOU NEED TO MAKE A CHANGE PLEASE USE THE INCLUDE FILES.
+
+                        <VirtualHost 208.116.60.117:80>
+                            ServerName fit4par.ch
+                            ServerAlias www.fit4par.ch
+                            DocumentRoot /home/fit4par/public_html
+                            ServerAdmin webmaster@fit4par.ch
+                            UseCanonicalName Off
+                            CustomLog /usr/local/apache/domlogs/fit4par.ch combined
+                            CustomLog /usr/local/apache/domlogs/fit4par.ch-bytes_log "%{%s}t %I .\n%{%s}t %O ."
+                            ## User fit4par # Needed for Cpanel::ApacheConf
+                            <IfModule mod_suphp.c>
+                                suPHP_UserGroup fit4par fit4par
+                            </IfModule>
+                            <IfModule !mod_disable_suexec.c>
+                                SuexecUserGroup fit4par fit4par
+                            </IfModule>
+                            ScriptAlias /cgi-bin/ /home/fit4par/public_html/cgi-bin/
+
+
+                            # To customize this VirtualHost use an include file at the following location
+                            # Include "/usr/local/apache/conf/userdata/std/2/fit4par/fit4par.ch/.conf"
+
+                        </VirtualHost>
+
   - Remove the VirtualHost which has a documentroot set to /dev/null
   - Reupload::
 
