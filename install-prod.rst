@@ -34,6 +34,7 @@ from root, you need to be zope::
 Go inside the instance folder
 ---------------------------------
 ::
+
 	cd /opt/minitage/zope/pgolf-prod
 
 The instance environement
