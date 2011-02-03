@@ -37,7 +37,7 @@ Go inside the instance folder
 
 	cd /opt/minitage/zope/pgolf-prod
 
-The instance environement
+The instance environment
 ----------------------------
 
 **YOU NEED TO DO THIS PRIORI TO USE ANY COMMAND ON YOUR INSTANCE**
