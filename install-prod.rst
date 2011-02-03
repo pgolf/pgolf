@@ -36,9 +36,9 @@ Go inside the instance folder
 The instance environement
 ----------------------------
 
-*** YOU NEED TO DO THIS PRIORI TO USE ANY COMMAND ON YOUR INSTANCE ***
+** YOU NEED TO DO THIS PRIORI TO USE ANY COMMAND ON YOUR INSTANCE **
 
-If you do not have ***(minitage-pgolf-prod)*** in the shell prompt do this
+If you do not have **(minitage-pgolf-prod)** in the shell prompt do this
 ::
 
 	. /opt/minitage/zope/pgolf-prod/sys/share/minitage/minitage.env
@@ -52,7 +52,9 @@ Use supervisor to know the status
 
 Restart the whole server
 -------------------------
-With the global init script, you can restart the server with::
+With the global init script, you can restart the server with
+As **root**
+::
 
 	service pgolf restart
 
