@@ -8,7 +8,7 @@ Sum up
  * :port supervisor: 25553
  * :port zeo: 25554
  * :install path: /opt/minitage/zope/pgolf-prod
- * :user: zope
+ * :user: fit4par
  * :apache bits: /opt/minitage/zope/pgolf-prod/etc/apache/200-pgolf.conf
 
 Minitage
@@ -23,13 +23,13 @@ Use the zope user
 
 The **id** command lets you verify the current user.
 
-from root, you need to be zope::
+from root, you need to be fit4par::
 
 	id
 	uid=0(root) gid=0(root) groups=0(root),1(bin) ...
-	su zope
+	su fit4par
 	id
-	uid=32009(zope) gid=100(users) groups=100(users)
+	uid=32009(fit4par) gid=100(users) groups=100(users)
 
 Go inside the instance folder
 ---------------------------------
@@ -125,25 +125,6 @@ Products installed at installation time:
  - ploneboard
  - contentwellportlets
  - collective.gallery
-
-
-How to use the server text EDITOR
------------------------------------------------------
- - use ::
-	
-	nano /path/to/file
-
- - The main controls are at the bottom of the page
- - ^X mean control +x
-
-
-
-
-
-
-
-
-
 
 
 
