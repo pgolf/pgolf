@@ -4,7 +4,6 @@ Plone installation notes
 
 Sum up
 -------
-Basic setup:
  - :port zope: 25555
  - :port supervisor: 25553
  - :port zeo: 25554
