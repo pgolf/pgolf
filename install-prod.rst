@@ -87,12 +87,8 @@ NOTE: We have put in the cpanel apache configuration editor an post hook to incl
 
 To resume apache to work:
 
-  - Open a terminal
-  - Download the main apache configuration::
- 
-		scp -P 100 root@208.116.60.117:/etc/httpd/conf/httpd.conf http.conf
- 
-  - Edit the downloaded file
+
+  - Edit on your server as *root* :  /etc/httpd/conf/httpd.conf via *SSH*
   - Remove from this file all <VirtualHost> nodes (from <VirtualHost> to </VirtualHost>) which relate to your domains
     eg remove ::
 
@@ -131,14 +127,25 @@ To resume apache to work:
                             ScriptAliasMatch .* /usr/local/cpanel/cgi-sys/domainredirect.cgi
                         </VirtualHost>
 
-  - Reupload::
-
-		scp -P 100 httpd.conf root@208.116.60.117:/etc/httpd/conf/httpd.conf
-
   - To take changes in account, restart apache on your server, as **root**::
 
         ssh root@208.116.60.117
 		service httpd restart
+
+ Alternativlt without coda
+
+
+  - Open a terminal
+  - Download the main apache configuration::
+ 
+		scp -P 100 root@208.116.60.117:/etc/httpd/conf/httpd.conf http.conf
+ 
+
+  - Do the edit
+  - Reupload::
+
+		scp -P 100 httpd.conf root@208.116.60.117:/etc/httpd/conf/httpd.conf
+
 
 
 Running buildout
